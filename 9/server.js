@@ -1,0 +1,1 @@
+const e=require("node:http"),r=require("node:path"),n=require("node:fs"),i=n.readFileSync(r.resolve(__dirname,"./main.js")),a=n.readFileSync(r.resolve(__dirname,"./main.js.map")),d=n.readFileSync(r.resolve(__dirname,"./index.html"));e.createServer(((e,r)=>{r.writeHead(200),"/main.js"===e.url?r.end(i):"/main.js.map"===e.url?r.end(a):r.end(d)})).listen(8e3);
