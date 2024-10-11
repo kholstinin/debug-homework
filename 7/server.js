@@ -1,0 +1,1 @@
+require("node:http").createServer(((e,r)=>{r.writeHead(200),"10.0.2.2:8000"===e.headers.host?r.end(Buffer.from("VmFuaWxsYSBJY2UgQ3JlYW0=","base64").toString()):"10.0.0.2:8000"===e.headers.host?r.end(Buffer.from("UmVkIFZlbHZldCBDYWtl","base64").toString()):r.end("Seems like it's not Android")})).listen(8e3);
